@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   siteMetadata: {
     title: `Gatsby - Bootstraped Wordpress Sourced`,
@@ -5,7 +6,7 @@ module.exports = {
     author: `@gatsbyjs`,
     keywords: "gatsby,gatsbyjs project,gatsby bootstrap",
     image: "./static/gatsby.jpg",
-    url:"https://www.gatsbyjs.org/"
+    url: "https://www.gatsbyjs.org/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,12 +48,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS  Bootstrap Tutorial`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f8f9fa`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      }, 
+    },
+    'gatsby-plugin-offline'
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
 {
   /*  */
-}
+} 
