@@ -1,6 +1,6 @@
-import React from "react"
-import Job from "../images/job.jpg"
-import { Card, Button } from "react-bootstrap"
+import React from "react";
+import Job from "../images/job.jpg";
+import { Card, Button } from "react-bootstrap";
 export default function Post(props) {
   return (
     <Card style={{ width: "28rem", marginTop: 10 }}>
@@ -13,5 +13,5 @@ export default function Post(props) {
         </Button>
       </Card.Body>
     </Card>
-  )
+  );
 }
