@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Title from "../components/Title"
-import Description from "../components/description"
+import Description from "../components/Description"
 
 const AboutUsPage = () => (
   <Layout>
