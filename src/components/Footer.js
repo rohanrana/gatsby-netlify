@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={FooterStyles.footer}>
       <div className="container">
-        <span className="text-muted"> &copy; Gatsby Project 2019</span>
+        <span className="text-dark"> &copy; Gatsby Project 2019</span>
       </div>
     </footer>
   )
