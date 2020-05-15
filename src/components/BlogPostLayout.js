@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /**
  * Layout component that queries for data
  * with Gatsby's useStaticQuery component
@@ -5,24 +6,25 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { graphql } from "gatsby"
-import Header from "./Header"
-import "./layout.css"
-import Footer from "./Footer"
-import SEO from "./SEO"
-import innertext from "innertext"
+import React from "react";
+import { graphql } from "gatsby";
+import Header from "./Header";
+import "./layout.css";
+import Footer from "./Footer";
+import SEO from "./SEO";
+import innertext from "innertext";
 
 const BlogPostLayout = ({ data }) => {
-  const post = data.wordpressPost
-  console.log("POST", post)
+  const post = data.wordpressPost;
+  console.log("POST", post);
   return (
     <>
       <SEO
         title={innertext(post.title)}
         description={innertext(post.excerpt)}
         image={post.featured_media.source_url}
-        keywords={post.categories.map(res => res.name).join(", ")}
+
+        // keywords={post.categories.map(res => res.name).join(", ")}
       />
       <Header />
       <div className="container">
@@ -33,10 +35,10 @@ const BlogPostLayout = ({ data }) => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default BlogPostLayout
+export default BlogPostLayout;
 export const query = graphql`
   query($slug: String!) {
     wordpressPost(slug: { eq: $slug }) {
@@ -46,8 +48,7 @@ export const query = graphql`
       featured_media {
         source_url
       }
-      categories
       excerpt
     }
   }
-`
+`;

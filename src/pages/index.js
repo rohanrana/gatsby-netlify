@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import Layout from "../components/layout"
 import Post from "../components/Post"
+import { graphql } from  "gatsby"
 import { Helmet } from "react-helmet"
 const IndexPage = ({ data }) => {
   console.log("DATA", data)
@@ -25,6 +27,7 @@ const IndexPage = ({ data }) => {
         <div className="p-3">
           {data.allWordpressPost.nodes.map(node => (
             <Post
+              key={node.title}
               title={node.title}
               excerpt={node.excerpt}
               image={node.featured_media.source_url}
